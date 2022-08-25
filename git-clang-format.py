@@ -177,6 +177,7 @@ def main():
   elif opts.diff:
     print_diff(old_tree, new_tree)
   elif opts.ci:
+    print_diff(old_tree, new_tree)
     raise ValueError("style changes required")
   else:
     changed_files = apply_changes(old_tree, new_tree, force=opts.force,
